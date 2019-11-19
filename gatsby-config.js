@@ -6,4 +6,8 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Paradise Tour Agency`,
+  },
+  plugins: [`gatsby-plugin-sass`],
 }
