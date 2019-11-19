@@ -5,11 +5,11 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
-    <React.Fragment>
-      <Navbar />
+    <main>
+      <Navbar></Navbar>
       {children}
-      <Footer />
-    </React.Fragment>
+      <Footer></Footer>
+    </main>
   )
 }
 
