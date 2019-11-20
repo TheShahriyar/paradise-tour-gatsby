@@ -9,5 +9,5 @@ module.exports = {
   siteMetadata: {
     title: `Paradise Tour Agency`,
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-styled-components`],
 }
