@@ -4,6 +4,7 @@ import SimpleHero from "../components/SimpleHero"
 import Banner from "../components/Banner"
 import { Link } from "gatsby"
 import About from "../components/section/About"
+import Service from "../components/section/Service"
 
 export default () => (
   <Layout>
@@ -17,6 +18,7 @@ export default () => (
         </Link>
       </Banner>
     </SimpleHero>
-    <About></About>
+    <About />
+    <Service />
   </Layout>
 )
