@@ -1,19 +1,34 @@
 import React from "react"
 import Title from "../Title"
 import "../../css/about.css"
-import img from "../../images/defaultBcg.jpeg"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+
+const getAbout = graphql`
+  {
+    aboutImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 const About = () => {
+  const { aboutImage } = useStaticQuery(getAbout)
   return (
     <section className="about">
       <Title title="About" subtitle="Us"></Title>
       <div className="about-center">
-        <artitle className="about-img">
+        <div className="about-img">
           <div className="img-container">
-            <img src={img} alt="About image" />
+            {/* <img src={img} alt="About-company" /> */}
+            <Img fluid={aboutImage.childImageSharp.fluid} alt="About-company" />
           </div>
-        </artitle>
-        <article className="about-info">
+        </div>
+        <div className="about-info">
           <h4>Explore the difference</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, esse
@@ -30,7 +45,7 @@ const About = () => {
           <button type="button" className="btn-primary">
             Read more
           </button>
-        </article>
+        </div>
       </div>
     </section>
   )

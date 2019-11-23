@@ -10,11 +10,11 @@ const Service = () => {
       <div className="center">
         {services.map((item, index) => {
           return (
-            <article key="index" className="service">
+            <div key={index} className="service">
               <span>{item.icon}</span>
               <h4>{item.title}</h4>
               <p>{item.text}</p>
-            </article>
+            </div>
           )
         })}
       </div>

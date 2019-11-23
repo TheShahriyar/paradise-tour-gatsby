@@ -22,3 +22,15 @@ export default () => (
     <Service />
   </Layout>
 )
+
+// export const query = graphql`
+//   {
+//     defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 4160, quality: 90) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `
